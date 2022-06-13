@@ -15,9 +15,11 @@ y4=datos(:,5);
 y5=datos(:,6);
 
 
+hold on
 
 %% Graficas con los datos del primer archivo
-figure() 
+%%figure()
+subplot(2,3,1)
 plot(x,y1)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -25,7 +27,9 @@ title('Precio por noche vs VPN en Tulum','FontName','Times New Roman','FontSize'
 xlabel('Precio por noche ($)','FontName','Times New Roman','FontSize', 12)
 ylabel('VPN ($)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+
+%figure()
+subplot(2,3,2)
 plot(x,y2)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -33,7 +37,8 @@ title('Precio por noche vs Periodo de recuperacion en Tulum (years)','FontName',
 xlabel('Precio por noche ($)','FontName','Times New Roman','FontSize', 12)
 ylabel('Tiempo de recuperacion (years)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,3)
 plot(x,y3)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -41,7 +46,8 @@ title('Precio por noche vs Relacion Beneficio/Costo','FontName','Times New Roman
 xlabel('Precio por noche ($)','FontName','Times New Roman','FontSize', 12)
 ylabel('Relacion Beneficio/Costo','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,4)
 plot(x,y4)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -49,7 +55,8 @@ title('Precio por noche vs Valor de Reventa','FontName','Times New Roman','FontS
 xlabel('Precio por noche ($)','FontName','Times New Roman','FontSize', 12)
 ylabel('Valor de Reventa','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,5)
 plot(x,y5)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -57,6 +64,7 @@ title('Precio por noche vs Retorno de la Inversion','FontName','Times New Roman'
 xlabel('Precio por noche ($)','FontName','Times New Roman','FontSize', 12)
 ylabel('Retorno de la Inversion','FontName','Times New Roman','FontSize', 12)
 
+hold off
 
 %% Lectura de datos del segundo archivo
 
@@ -71,7 +79,10 @@ yy5=datos2(:,6);
 
 %% Graficas con los datos del segundo archivo
 
+hold on
+
 figure()
+subplot(2,3,1)
 plot(xx,yy1)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -79,7 +90,8 @@ title('Evaluacion en Plataforma vs VPN en Tulum','FontName','Times New Roman','F
 xlabel('Evaluacion en Plataforma','FontName','Times New Roman','FontSize', 12)
 ylabel('VPN ($)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,2)
 plot(xx,yy2)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -87,7 +99,8 @@ title('Evaluacion en Plataforma vs Periodo de recuperacion en Tulum (years)','Fo
 xlabel('Evaluacion en Plataforma','FontName','Times New Roman','FontSize', 12)
 ylabel('Tiempo de recuperacion (years)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,3)
 plot(xx,yy3)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -95,7 +108,8 @@ title('Evaluacion en Plataforma vs Relacion Beneficio/Costo','FontName','Times N
 xlabel('Evaluacion en Plataforma','FontName','Times New Roman','FontSize', 12)
 ylabel('Relacion Beneficio/Costo','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,4)
 plot(xx,yy4)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -103,13 +117,16 @@ title('Evaluacion en Plataforma vs Valor de Reventa','FontName','Times New Roman
 xlabel('Evaluacion en Plataforma','FontName','Times New Roman','FontSize', 12)
 ylabel('Valor de Reventa','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,5)
 plot(xx,yy5)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
 title('Evaluacion en Plataforma vs Retorno de la Inversion','FontName','Times New Roman','FontSize', 12)
 xlabel('Evaluacion en Plataforma','FontName','Times New Roman','FontSize', 12)
 ylabel('Retorno de la Inversion','FontName','Times New Roman','FontSize', 12)
+
+hold off
 
 %% Lectura de datos del tercer archivo
 
@@ -124,7 +141,10 @@ yyy5=datos3(:,6);
 
 %% Graficas con los datos del segundo archivo
 
+hold on
+
 figure()
+subplot(2,3,1)
 plot(xxx,yyy1)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -132,7 +152,8 @@ title('Costo inicial de la propiedad vs VPN en Tulum','FontName','Times New Roma
 xlabel('Costo inicial de la propiedad','FontName','Times New Roman','FontSize', 12)
 ylabel('VPN ($)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,2)
 plot(xxx,yyy2)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -140,7 +161,8 @@ title('Costo inicial de la propiedad vs Periodo de recuperacion en Tulum (years)
 xlabel('Costo inicial de la propiedad','FontName','Times New Roman','FontSize', 12)
 ylabel('Tiempo de recuperacion (years)','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,3)
 plot(xxx,yyy3)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -148,7 +170,8 @@ title('Costo inicial de la propiedad vs Relacion Beneficio/Costo','FontName','Ti
 xlabel('Costo inicial de la propiedad','FontName','Times New Roman','FontSize', 12)
 ylabel('Relacion Beneficio/Costo','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,4)
 plot(xxx,yyy4)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -156,7 +179,8 @@ title('Costo inicial de la propiedad vs Valor de Reventa','FontName','Times New 
 xlabel('Costo inicial de la propiedad','FontName','Times New Roman','FontSize', 12)
 ylabel('Valor de Reventa','FontName','Times New Roman','FontSize', 12)
 
-figure()
+%figure()
+subplot(2,3,5)
 plot(xxx,yyy5)
 grid minor
 set(gca, 'FontName','Times New Roman','fontsize', 12)
@@ -164,3 +188,4 @@ title('Costo inicial de la propiedad vs Retorno de la Inversion','FontName','Tim
 xlabel('Costo inicial de la propiedad','FontName','Times New Roman','FontSize', 12)
 ylabel('Retorno de la Inversion','FontName','Times New Roman','FontSize', 12)
 
+hold off
